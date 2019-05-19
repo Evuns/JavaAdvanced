@@ -1,4 +1,4 @@
-package StackQue;
+package StackQue.Lab;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
