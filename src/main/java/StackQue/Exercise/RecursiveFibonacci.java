@@ -1,5 +1,5 @@
-import java.util.ArrayDeque;
-import java.util.Arrays;
+package StackQue.Exercise;
+
 import java.util.Scanner;
 
 public class RecursiveFibonacci {
@@ -17,12 +17,13 @@ public class RecursiveFibonacci {
         System.out.println(result);
 
     }
+
     private static long fibonacci(int n) {
-        if (n < 2){
+        if (n < 2) {
             return 1;
         }
 
-        if(memory [n] != 0){
+        if (memory[n] != 0) {
             return memory[n];
         }
 
