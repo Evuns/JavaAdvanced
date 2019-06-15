@@ -20,6 +20,5 @@ public class CountUpperWords {
 
         System.out.println(upperWords.size());
         upperWords.forEach(System.out::println);
-
     }
 }
