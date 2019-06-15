@@ -12,10 +12,10 @@ public class CountUpperWords {
 
         String [] input = scanner.nextLine().split(" ");
 
-        Predicate<String> isUpper = x -> x.charAt(0) >  64 && x.charAt(0) < 91;
+        Predicate<String> isUpper = x -> Character.isUpperCase(x.charAt(0));
 
-        List<String> upperWords = Arrays.stream(input).
-                filter(isUpper)
+        List<String> upperWords = Arrays.stream(input)
+                .filter(isUpper)
                 .collect(Collectors.toList());
 
         System.out.println(upperWords.size());
