@@ -1,4 +1,4 @@
-package DefiningClasses.BankAccount;
+package DefiningClasses.Lab.BankAccount;
 
 import java.util.HashMap;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package DefiningClasses.BankAccount;
+package DefiningClasses.Lab.BankAccount;
 
 public class BankAccount {
 
