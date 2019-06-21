@@ -34,26 +34,20 @@ public class Main {
             departmentList.get(department).addEmployee(employee);
         }
 
-        Map.Entry<String, Departments> highestSalary = departmentList.entrySet().stream()
-                .sorted((a, b) -> {
-                    int result = 0;
-                    if (a.getValue().getAverageSalary() > b.getValue().getAverageSalary()) {
-                        result = -1;
-                    } else if (a.getValue().getAverageSalary() < b.getValue().getAverageSalary()) {
-                        result = 1;
-                    }
-                    return result;
-                }).findFirst().get();
-
-        System.out.println(String.format("Highest Average Salary: %s", highestSalary.getKey()));
-        highestSalary.getValue().getEmployees().stream()
-                .sorted((a, b) -> Double.compare(b.getSalary(), a.getSalary()))
-                .forEach(employee -> {
-                    System.out.println(String.format("%s %.2f %s %d", employee.getName()
-                            , employee.getSalary(), employee.getEmail(),
-                            employee.getAge()
-                    ));
-                });
+        departmentList.entrySet().stream()
+                .sorted((a, b) -> Double.compare(b.getValue().getAverageSalary(),
+                        a.getValue().getAverageSalary()))
+                .limit(1).forEach(entry -> {
+            System.out.println(String.format("Highest Average Salary: %s", entry.getKey()));
+            entry.getValue().getEmployees().stream()
+                    .sorted((a, b) -> Double.compare(b.getSalary(), a.getSalary()))
+                    .forEach(employee -> {
+                        System.out.println(String.format("%s %.2f %s %d", employee.getName()
+                                , employee.getSalary(), employee.getEmail(),
+                                employee.getAge()
+                        ));
+                    });
+        });
 
     }
 }
