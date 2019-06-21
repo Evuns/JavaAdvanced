@@ -1,4 +1,4 @@
-package DefiningClasses.CarInfo;
+package DefiningClasses.Lab.CarInfo;
 
 public class Car {
 

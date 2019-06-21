@@ -1,4 +1,4 @@
-package DefiningClasses.CarInfo;
+package DefiningClasses.Lab.CarInfo;
 
 import java.util.ArrayList;
 import java.util.List;
